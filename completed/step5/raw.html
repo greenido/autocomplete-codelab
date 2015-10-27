@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Autcomplete codelab</title>
+</head>
+
+<body>
+  <div role="main">
+    <form method="post" id="usrForm">
+      <div class="form-group">
+        <label for="frmNameA">Name</label>
+        <input name="name" id="frmNameA"  autocomplete="name"
+        placeholder="Full name" required></div>
+
+      <div class="form-group">
+        <label for="frmEmailA">Email</label>
+        <input type="email" name="email" id="frmEmailA"          
+        autocomplete="email"
+        placeholder="name@example.com" required></div>
+
+      <div class="form-group">
+        <label for="frmEmailC">Confirm Email</label>
+        <input type="email" name="emailC" id="frmEmailC"
+        autocomplete="email"
+        placeholder="name@example.com" required></div>
+
+      <div class="form-group">
+        <label for="frmPhoneNumA">Phone</label>
+        <input type="tel" name="phone" id="frmPhoneNumA"
+        autocomplete="tel"
+        placeholder="+1-650-450-1212" required></div>
+
+      <h3>Addresss</h3>
+      <div class="form-group">
+        <label for="frmAddressS">Address</label>
+        <div class="col-lg-10">
+          <input name="ship-address" required id="frmAddressS" autocomplete="shipping street-address"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="frmCityS">City</label>
+        <div class="col-lg-10">
+          <input name="ship-city" required id="frmCityS" placeholder="New York" autocomplete="shipping address-level2"></div>
+      </div>
+      <div class="form-group">
+        <label for="frmStateS">State</label>
+        <div class="col-lg-10">
+          <input name="ship-state" required id="frmStateS" placeholder="NY" autocomplete="shipping address-level3"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="frmZipS">Zip</label>
+        <div class="col-lg-10">
+          <input name="ship-zip" required id="frmZipS" placeholder="10011" autocomplete="shipping postal-code"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="frmCountryS">Country</label>
+        <div class="col-lg-10">
+          <input name="ship-country" required id="frmCountryS" placeholder="USA" autocomplete="shipping country"></div>
+      </div>
+
+      <h3>Payment</h3>
+      <div class="form-group">
+        <label for="frmNameCC">Name on card</label>
+        <div class="col-lg-10">
+          <input name="ccname" id="frmNameCC" required placeholder="Full Name" autocomplete="cc-name"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="frmCCNum">Card Number</label>
+        <div class="col-lg-10">
+          <input name="cardnumber" id="frmCCNum" required autocomplete="cc-number"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="frmCCCVC">CVC</label>
+        <div class="col-lg-10">
+          <input name="cvc" id="frmCCCVC" required autocomplete="cc-csc"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="frmCCExp">Expiry</label>
+        <div class="col-lg-10">
+          <input name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp"></div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-12">
+          <button class="btn btn-default">Cancel</button>
+          <button type="submit" id="butCheckout" class="btn btn-success">Check Out</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+</body>
+</html>
