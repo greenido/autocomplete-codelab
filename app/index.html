@@ -13,158 +13,115 @@
 <body>
   <div class="container">
     <div class="row jumbotron">
-      <button id="help-btn" class="btn btn-small" type="button" data-toggle="collapse" 
-        data-target="#details" aria-expanded="false" aria-controls="details">
-        <span class="glyphicon glyphicon-info-sign"></span>
-      </button>
+
       <h3>Auto Complete Code lab 2015</h3>
-
-      <div class="collapse" id="details">
-        <div class="col-md-11 col-xs-11">
-          <h4>Autofill in action</h4>
-          To try this example:
-          <ol>
-            <li>
-              Open it in Chrome (version 42+) and start filling the fields.
-            </li>
-            <li>
-              Chrome will suggest you 'auto fill' data from what it got so far.
-            </li>
-            <li>
-              For extra points, open Chrome DevTools and checkout the attributes we used on each field.
-            </li>
-            <li>
-              You can also try to click on the 'Checkout' button at the bottom of the form and see the validation in action.
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active">
-        <a href="#contact-sec" aria-controls="home" role="tab" data-toggle="tab">1) Contact</a>
-      </li>
-      <li role="presentation">
-        <a href="#shipping-sec" aria-controls="profile" role="tab" data-toggle="tab">2) Address</a>
-      </li>
-      <li role="presentation">
-        <a href="#payment-sec" aria-controls="messages" role="tab" data-toggle="tab">3) Payment</a>
-      </li>
-    </ul>
-
-    <div role="main">
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="contact-sec">
-          <form method="post" id="usrForm" class="form-horizontal">
-            <div id="contact-sec" role="tabpanel"  class="tab-pane fade in active">
-              <div class="form-group">
-                <label for="frmNameA" class="col-lg-2 control-label">Name</label>
-                <div class="col-lg-10">
-                  <input name="name" id="frmNameA" class="form-control validate" placeholder="Full name" required autocomplete="name"></div>
-              </div>
-              <div class="form-group">
-                <label for="frmEmailA" class="col-lg-2 control-label">Email</label>
-                <div class="col-lg-10">
-                  <input type="email" name="email" class="form-control validate" id="frmEmailA" placeholder="name@example.com" required autocomplete="email"></div>
-              </div>
-              <div class="form-group">
-                <label for="frmEmailC" class="col-lg-2 control-label">Confirm Email</label>
-                <div class="col-lg-10">
-                  <input type="email" name="emailC" class="form-control validate" id="frmEmailC" placeholder="name@example.com" required autocomplete="email"></div>
-              </div>
-
-              <div class="form-group">
-                <label for="frmPhoneNumA" class="col-lg-2 control-label">Phone</label>
-                <div class="col-lg-10">
-                  <input type="tel" name="phone" id="frmPhoneNumA" class="form-control validate" placeholder="+1-650-450-1212" required autocomplete="tel"></div>
-              </div>
-            </div>
-          
-        </div>
-
-        <div role="tabpanel" class="tab-pane" id="shipping-sec">
-          
+      <p>
+        <h4>The Full Form</h4>
+        <br>
+        <small>
+          For a full list of the autocomplete attributes checkout:
+          <a href="https://greenido.wordpress.com/2015/05/06/auto-complete-attribute-will-improve-your-profit/">Autocomplete attributes</a>
+        </small>
+      </p>
+      <div role="main">
+        <form method="post" id="userForm" class="form-horizontal">
+          <div id="contact-sec" role="tabpanel"  class="tab-pane fade in active">
             <div class="form-group">
-              <label for="frmAddressS" class="active col-lg-2 control-label">Address</label>
+              <label for="frmNameA" class="col-lg-2 control-label">Name</label>
               <div class="col-lg-10">
-                <input name="ship-address" class="form-control validate" required id="frmAddressS" autocomplete="shipping street-address"></div>
+                <input name="name" id="frmNameA" class="form-control validate" autocomplete="name"
+                placeholder="Full name" required></div>
             </div>
-
             <div class="form-group">
-              <label for="frmCityS" class="active col-lg-2 control-label">City</label>
+              <label for="frmEmailA" class="col-lg-2 control-label">Email</label>
               <div class="col-lg-10">
-                <input name="ship-city" class="form-control validate" required id="frmCityS" placeholder="New York" autocomplete="shipping address-level2"></div>
+                <input type="email" name="email" class="form-control validate" id="frmEmailA" autocomplete="email"
+                placeholder="name@example.com" required ></div>
             </div>
             <div class="form-group">
-              <label for="frmStateS" class="active col-lg-2 control-label">State</label>
+              <label for="frmEmailC" class="col-lg-2 control-label">Confirm Email</label>
               <div class="col-lg-10">
-                <input name="ship-state" class="form-control validate" required id="frmStateS" placeholder="NY" autocomplete="shipping address-level3"></div>
+                <input type="email" name="emailC" class="form-control validate" id="frmEmailC" autocomplete="email"
+                placeholder="name@example.com" required ></div>
             </div>
 
             <div class="form-group">
-              <label for="frmZipS" class="active col-lg-2 control-label">Zip</label>
+              <label for="frmPhoneNumA" class="col-lg-2 control-label">Phone</label>
               <div class="col-lg-10">
-                <input name="ship-zip" class="form-control validate" required id="frmZipS" placeholder="10011" autocomplete="shipping postal-code"></div>
+                <input type="tel" name="phone" id="frmPhoneNumA" class="form-control validate" autocomplete="tel"
+                placeholder="+1-650-450-1212" required></div>
             </div>
+          </div>
 
-            <div class="form-group">
-              <label for="frmCountryS" class="active col-lg-2 control-label">Country</label>
-              <div class="col-lg-10">
-                <input name="ship-country" class="form-control validate" required id="frmCountryS" placeholder="USA" autocomplete="shipping country"></div>
+          <h3>Address</h3>
+          <p>
+            Open DevTools and see the autocomplete attributes per Address field
+          </p>
+          <div class="form-group">
+            <label for="frmAddressS" class="col-lg-2 control-label">Address</label>
+            <div class="col-lg-10">
+              <input name="ship-address" class="form-control validate" required id="frmAddressS" autocomplete="shipping street-address"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="frmCityS" class="col-lg-2 control-label">City</label>
+            <div class="col-lg-10">
+              <input name="ship-city" class="form-control validate" required id="frmCityS" placeholder="New York" autocomplete="shipping address-level2"></div>
+          </div>
+          <div class="form-group">
+            <label for="frmStateS" class="col-lg-2 control-label">State</label>
+            <div class="col-lg-10">
+              <input name="ship-state" class="form-control validate" required id="frmStateS" placeholder="NY" autocomplete="shipping address-level3"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="frmZipS" class="col-lg-2 control-label">Zip</label>
+            <div class="col-lg-10">
+              <input name="ship-zip" class="form-control validate" required id="frmZipS" placeholder="10011" autocomplete="shipping postal-code"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="frmCountryS" class="col-lg-2 control-label">Country</label>
+            <div class="col-lg-10">
+              <input name="ship-country" class="form-control validate" required id="frmCountryS" placeholder="USA" autocomplete="shipping country"></div>
+          </div>
+
+          <h3>Payment</h3>
+          <p> <i class="large mdi-action-add-shopping-cart"></i>
+            Do <b>NOT</b>
+            provide real credit card information in this field.
+          </p>
+          <div class="form-group">
+            <label for="frmNameCC" class="col-lg-2 control-label">Name on card</label>
+            <div class="col-lg-10">
+              <input name="ccname" id="frmNameCC" class="form-control" required placeholder="Full Name" autocomplete="cc-name"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="frmCCNum" class="col-lg-2 control-label">Card Number</label>
+            <div class="col-lg-10">
+              <input name="cardnumber" id="frmCCNum" class="form-control" required autocomplete="cc-number"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="frmCCCVC" class="col-lg-2 control-label">CVC</label>
+            <div class="col-lg-10">
+              <input name="cvc" id="frmCCCVC" class="form-control" required autocomplete="cc-csc"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="frmCCExp" class="col-lg-2 control-label">Expiry</label>
+            <div class="col-lg-10">
+              <input name="cc-exp" id="frmCCExp" class="form-control" required placeholder="MM-YYYY" autocomplete="cc-exp"></div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-lg-12">
+              <button class="btn btn-default">Cancel</button>
+              <button type="submit" id="butCheckout" class="btn btn-success">Check Out</button>
             </div>
-
-            <div class="row">
-              <div class="col s10">
-                <input type="checkbox" class="filled-in" name="billAndShip" id="cbBillAndShip">
-                <label for="cbBillAndShip">Bill to this address</label>
-              </div>
-            </div>
-          
-        </div>
-
-        <div role="tabpanel" class="tab-pane" id="payment-sec">
-          
-            <p> <i class="large mdi-action-add-shopping-cart"></i>
-              Do <b>NOT</b>
-              provide real credit card information in this field.
-            </p>
-            <div class="form-group">
-              <label for="frmNameCC" class="col-lg-2 control-label">Name on card</label>
-              <div class="col-lg-10">
-                <input name="ccname" id="frmNameCC" class="form-control" required placeholder="Full Name" autocomplete="cc-name"></div>
-            </div>
-
-            <div class="form-group">
-              <label for="frmCCNum" class="col-lg-2 control-label">Card Number</label>
-              <div class="col-lg-10">
-                <input name="cardnumber" id="frmCCNum" class="form-control" required autocomplete="cc-number"></div>
-            </div>
-
-            <div class="form-group">
-              <label for="frmCCCVC" class="col-lg-2 control-label">CVC</label>
-              <div class="col-lg-10">
-                <input name="cvc" id="frmCCCVC" class="form-control" required autocomplete="cc-csc"></div>
-            </div>
-
-            <div class="form-group">
-              <label for="frmCCExp" class="col-lg-2 control-label">Expiry</label>
-              <div class="col-lg-10">
-                <input name="cc-exp" id="frmCCExp" class="form-control" required placeholder="MM-YYYY" autocomplete="cc-exp"></div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-lg-12">
-                <button class="btn btn-default">Cancel</button>
-                <button type="submit" id="butCheckout" class="btn btn-success">Check Out</button>
-              </div>
-            </div>
-
-          </form>
-        </div>
-
+          </div>
+        </form>
       </div>
     </div>
 
