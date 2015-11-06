@@ -1,5 +1,8 @@
 # Autocomplete Codelab Demo
 
+## Demo
+You can see the [final result of the form](https://greenido.github.io/autocomplete-codelab/app/index.html)
+
 ## License
 
 Copyright 2015 Google, Inc.
